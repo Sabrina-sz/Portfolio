@@ -113,8 +113,6 @@ document.getElementById("formularioContato").addEventListener("submit", function
     });
       // Submete o formulário manualmente
       this.submit();
-  } else {
-      alert("Por favor, preencha todos os campos!");
   }
 });
 

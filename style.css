@@ -281,15 +281,16 @@ main{
     justify-content: center;
     align-items: center;
     gap: .5rem;
-    height: 46.5rem;
+    height: 49rem;
     padding: .8rem;
-   
+    
 }
 .secao-projetos h1{
     font-size: 1.8rem;
     font-family: "Noto Serif", serif;
     font-weight: 500;
     color: #8257E5;
+    
   
 }
 .resumo-projetos{
@@ -348,7 +349,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    height: 47rem;
+    height: 48rem;
     padding: 2rem;
     background-color:#272727;
     width: 100%; 
@@ -502,7 +503,7 @@ textarea:focus{
 footer{
     height: 5rem;
     text-align: center;
-    background-color: #242424;   
+    background-color: #1f1e1e;   
 }
 .rodape_content h3{
     display: flex;

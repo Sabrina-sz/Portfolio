@@ -1,0 +1,900 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    font-size: 62.4%;
+}
+
+body{
+    max-width: 100%;
+    background-color: #111111;
+    color: #ffff;
+    /*
+    background-image: url(./img/background-moblie.png);
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    background-attachment: fixed;
+    background-size: cover;
+    */
+    
+}
+
+/* Bottom Bar Container */
+
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    background-color:#2e2d2d;
+    box-shadow: 0 -.2rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1rem 1rem 0 0;
+    z-index: 1;
+}
+.bottom-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 0;
+    list-style: none;
+}
+.bottom-item {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+}
+.bottom-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #555;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+/* Ícone */
+.bottom-item ion-icon {
+    font-size: 2.4rem;
+    margin-bottom: .5rem;
+    color: #555;
+    transition: color 0.3s;
+}
+/* Descrição (escondida por padrão) */
+.item-description2 {
+    font-size: 1.2rem;
+    display: none; /* Esconde a descrição */
+    color: #555;
+}
+/* Borda superior no item ativo */
+.bottom-item.active1::before {
+    content: "";
+    position: absolute;
+    top: -.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: .2rem;
+    background-color: #8257E5; /* Cor da borda */
+    border-radius: .2rem;
+}
+
+/* Estilo ativo */
+.bottom-item.active1 ion-icon {
+    color: #8257E5; /* Ícone ativo */
+}
+
+.bottom-item.active1 .item-description2 {
+    display: block; /* Mostra a descrição no ativo */
+    color:  #8257E5; /* Cor da descrição ativa */
+    font-family: "Noto Serif", sans-serif;
+
+}
+
+.logo{
+    display: none;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    
+}
+.secao-apresentacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    padding: .8rem;
+   
+}
+.img-principal img{
+    display: block;
+    margin: 0 auto;
+    border-radius: 100%;
+    width: 21.9rem;
+    height: auto;
+   
+}
+.sobre{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+ 
+}
+.titulo-hello-world h1{
+    font-size: 3.4rem;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.2rem;
+}
+.sobre h2{
+    font-size: 2.2rem;
+    font-family: "Noto Serif", serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    color: #8257E5;
+  
+}
+.sobre p{
+    font-size: 1.3rem;
+    font-family: "Noto Serif", sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+.redes{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 2rem;
+   padding-block: 1rem;
+   
+}
+.icones-redes ion-icon{
+    font-size: 2.5rem;
+    border: 1px groove #8257E5;
+    border-radius: 100%;
+    padding: .4rem;
+    color: #8257E5;
+}
+.secao-habilidade{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 15rem;
+    padding: .8rem;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    padding-inline:5rem;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 6.5rem;
+    height: 7rem;
+    list-style-type: none;
+    border:1px solid  #8257E5;
+    border-radius: 3px ;
+}
+.secao-habilidade p{
+    color:#ffffff;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+}
+.secao-habilidade h1{
+    font-size: 1.8rem;
+    font-family: "Noto Serif", serif;
+    font-weight: 500;
+    color: #8257E5;
+   
+}
+
+.secao-hobbies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    background-color:#272727;
+    width:100%;
+    padding-block: 4.5rem;
+    height: 46.5rem;
+}
+.secao-hobbies h1{
+     font-size: 1.8rem;
+    font-family: "Noto Serif", serif;
+    font-weight: 500;
+    color: #8257E5;
+}
+.cards-hobbies{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: .5rem;
+    font-size: 5rem;
+    padding-top: 1.5rem;
+
+}
+.secao-hobbies ion-icon p{
+    font-size: 5rem;
+}
+.cards-hb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    list-style-type: none;
+    background-color:#8257E5;
+    color: #f6f6f6;
+    width: 11.5rem;
+    height: 9.5rem;
+    font-size:1.4rem;
+    border-radius: .3rem;
+   
+}
+.card-item{
+    text-align: center;
+    padding: .5rem;
+}
+.card-item ion-icon{
+    font-size: 2rem;
+   
+}
+.card-item p{
+    font-size: 1.2rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+
+}
+.cards-hb-posicao3 {
+    grid-row-start: 2;
+}
+.cards-hb-posicao4{
+    grid-row-start: 2;
+}
+.cards-hb-posicao5 {
+    grid-row-start: 3;
+}
+
+.cards-hb-posicao6 {
+    grid-row-start: 3;
+}
+.secao-projetos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    height: 46.5rem;
+    padding: .8rem;
+   
+}
+.secao-projetos h1{
+    font-size: 1.8rem;
+    font-family: "Noto Serif", serif;
+    font-weight: 500;
+    color: #8257E5;
+  
+}
+.resumo-projetos{
+   text-align: center;
+}
+.resumo-projetos h2{
+    font-size: 1.3rem;
+}
+.resumo-projetos p{
+    font-size: 1.1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+.project-dev{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+.carrosel {
+    position: relative;
+    width: 85%;
+    max-width: 60rem;
+    margin: auto;
+    overflow: hidden;
+    border-radius: .4rem; 
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    width: 100%;
+    height: auto;
+}
+  /* Indicadores abaixo das imagens */
+.indicators {
+    text-align: center; /* Centraliza os indicadores */
+    margin-top: .2rem; /* Espaço entre imagem e indicadores */
+    position: relative; /* Remove absolute */
+}
+.dot {
+    display: inline-block;
+    width: .6rem;
+    height: .6rem;
+    margin: .5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.dot.active1,
+.active {
+    background-color: rgba(255, 255, 255, 1);
+}
+.secao-formacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 47rem;
+    padding: 2rem;
+    background-color:#272727;
+    width: 100%; 
+}
+.secao-formacoes h1{
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: "Noto Serif", serif;
+    font-weight: 500;
+    color: #8257E5;
+}
+.card-formacoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:.8rem;
+}
+.formacao{
+    list-style-type: none;
+    background-color: #313131;
+    width: 15rem;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f6f6f6;
+    border-radius: 5px 0; 
+}
+.fc-descricao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+.fc-descricao p{
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+   text-align: center;
+}
+.secao-contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 47rem;
+    padding: 1rem;
+}
+
+.aviso-contato h1{
+    font-size: 1.7rem;
+    font-family: "Noto Serif", serif;
+    font-weight: 500;
+    color: #8257E5;
+}
+.aviso-contato p{
+    font-size: 1.1rem;
+    font-family: "Noto Serif", serif;
+    font-weight: 400;
+}
+
+.formulario-contato form {
+    display: flex;
+    padding-top: .5rem;
+    flex-direction:column;
+    gap: 1.2rem;  
+}
+
+form input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.6rem;
+    height: 4rem;
+    padding-inline: 1.2rem;
+    padding-block: 1rem;
+    color: #fff;
+    border:none;
+    border-bottom: 1px solid #8257E5;
+    background: transparent;
+
+}
+input:focus{
+    outline: none;
+    border-bottom: 1px solid #fff;
+}
+form label{
+    font-size: 1.5rem;
+    color:  #8257E5;
+}
+input::placeholder{
+    padding-right: 1rem;
+    font-size: 1.4rem;
+    text-align: start;
+}
+.text-area{
+    padding-top: 2rem;
+}
+textarea{
+    padding: 1.2rem 1rem;
+    resize: none;
+    width: 100%;
+    height: 11.5rem;
+    outline: none;
+    color:#fff;
+    border: 1px solid #8257E5;
+    background-color: transparent;
+    border-radius: .3rem;
+
+}
+textarea::placeholder{
+  font-size: 1.4rem;
+  
+}
+textarea:focus{
+    border: 1px solid #fff;
+}
+
+.rodape{
+    padding-bottom:7rem;
+}
+.botao-enviar{
+    padding-block: .8rem;
+}
+.botao-enviar button{
+    padding: .6rem;
+    background: #8257E5;
+    border: none;
+    color: #fff;
+    font-size: 1.4rem;
+    border: 1px solid #8257E5;
+    border-radius: 2px;
+    width: 100%;
+  
+}
+.swal2-popup{
+    background-color: #313131;
+}
+
+
+footer{
+    height: 5rem;
+    text-align: center;
+    background-color: #242424;   
+}
+.rodape_content h3{
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    margin: 0 auto;
+    font-family: "Noto Serif", sans-serif ;
+    font-weight:400 ;
+}
+.rodape_content{
+    display: flex;
+    padding: .6rem 1rem;
+    border-top: 1px  #8257E5;
+}
+.rodape_content img{
+    width:3.5rem;
+    border: .2 groove  #8257E5;
+    box-shadow: 0rem 0rem .9rem  #8257E5;
+    border-radius: 6rem;
+    
+}
+.sidebar{
+    display: none;
+}
+#open_btn{
+    display: none;
+}
+@media(max-width:768px){
+   
+}
+@media(min-width:1020px){
+   .bottom-bar{
+    display: none;
+   }
+  
+      ::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #8257E5;
+    border-radius: 2rem;
+}
+
+body{
+    
+    background-color: #111111;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color:#242323;
+    height: 100vh;
+    border-radius: 0px .5rem .5rem 0px;
+    position: relative;
+    position: fixed;
+    transition: all .5s;
+    min-width: 1rem;
+    padding: .4rem;
+    z-index: 1;
+  
+}
+.logo img{
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+    border: .1 groove #8257E5;
+    box-shadow: 0rem 0rem .7rem #8257E5;
+    border-radius: 6rem;
+    
+   
+}
+.logo{
+    padding-top:.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar_content{
+    padding: 1.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.side-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    list-style: none;
+}
+.side-item{
+    display: flex;
+    border-radius: .3rem;
+    padding:.4rem ;
+    cursor: pointer;
+}
+.side-item:nth-child(1){
+    margin-bottom:.8rem;
+}
+.side-item.active{
+    background-color: #8257E5;
+   
+}
+.side-item:hover:not(active){
+    background-color: #2e2e2e;
+}
+.side-item a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+   
+    font-weight: 300;
+}
+.side-item.active a ion-icon{
+    color: #f6f6f6;
+
+}
+.side-item a ion-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    color: #8257E5 ;
+    width: 50px;
+
+
+}
+.side-item span{
+    font-size: 1.4rem;
+    font-family: "Noto Serif", sans-serif;
+    font-weight: 300;
+}
+
+#open-btn{
+    position: absolute;
+    top: 2rem;
+    right: -1rem;
+    background-color: #8257E5;
+    color: #f6f6f6;
+    border-radius: 100%;
+    font-size: 1.7rem;
+    height: 23px;
+    width: 23px;
+    padding: .2rem;
+    border: none;
+    cursor: pointer;
+}
+#open-btn ion-icon{
+    transition: transform .3s ease;
+}
+.open-sidebar #open-btn ion-icon{
+    transform: rotate(180deg);
+}
+
+
+.item-description{
+
+  overflow: hidden;
+   width: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size:1.1rem;
+    font-family: "Lato", sans-serif;
+    transition: width .6s;
+    
+  
+    
+
+}
+main.shifter{
+    padding-left: 18rem;
+    
+}
+.sidebar.open-sidebar{
+    min-width: 5%;
+}
+.sidebar.open-sidebar .item-description{
+    width: 6.5rem;
+    height: auto;
+}
+.sidebar.open-sidebar .side-item a{
+    justify-content: flex-start;
+    gap: 1.4rem;
+}
+.sidebar.open-sidebar .logo img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+main{
+    transition: padding-left .8s;
+    padding-left:1rem;
+    display: flex;
+    flex-direction: column;
+   
+}
+.titulo-hello-world h1{
+   font-size: 4.5rem;
+}
+.secao-apresentacao{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: .5rem;
+    gap: .3rem;
+  
+    
+}
+.conteudo-principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+   
+
+}
+.img-principal{
+    order: 2;
+   
+}
+.img-principal img{
+    width: 29rem;
+}
+.sobre{
+    order: 1;
+    width: 80rem;
+}
+.sobre p{
+    
+    font-size: 1.7rem;
+    
+}
+.redes{
+   
+    margin: 0 auto;
+    padding-top: 2rem;
+
+}
+.secao-habilidade{
+    height:30rem ;
+    padding-bottom:1.8rem;
+}
+.secao-habilidade h1{
+    font-size: 2rem;
+}
+.cards{
+    gap:1.5rem;
+}
+.card{
+    width:12rem;
+    height: 13rem;
+
+}
+.card p{
+    font-size:1.1rem;
+}
+svg{
+    width:6rem;
+    height: 6rem;
+}
+.secao-hobbies{
+    background-color:#272727;
+    width:100%;
+    height:61rem;
+    
+}
+.secao-hobbies h1{
+    font-size:2.4rem;
+
+}
+
+.cards-hb{
+    margin: 0 auto;
+    height:12rem;
+    width:13rem;
+    background-color:#8257E5;
+}
+.card-item ion-icon{
+    font-size: 2.6rem;
+   
+}
+.card-item p{
+    font-size: 1.3rem;
+    
+}
+.secao-projetos{
+    height: 74rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+}
+.secao-projetos h1{
+    font-size: 2.4rem;
+}
+.carrosel{
+    width: 45rem;
+}
+.project-dev{
+   gap: 2rem;
+}
+.resumo-projetos h2{
+    font-size:1.6rem ;
+}
+.resumo-projetos p{
+    font-size: 1.3rem;
+}
+.secao-formacoes{
+    height: 62rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color:#272727;
+    width: 100%;
+    padding-top: 3rem;
+
+
+   
+}.secao-formacoes h1{
+    font-size:2rem ;
+}
+.card-formacoes{
+    display: flex;
+    
+    margin: 0 auto;
+    gap: .5rem;
+    
+}
+.fc-descricao p{
+    font-size: 1.1rem;
+}
+.formacao{
+    height: 15rem;
+    width: 17rem;
+    
+
+}
+.secao-contato{
+    height: 56rem;
+    padding:.5rem;
+
+}
+.aviso{
+    gap: 1rem;
+}
+.contato{
+    border: 2px solid #8257E5;
+    border-radius: 3px;
+    padding: 3rem;
+}
+
+.rodape{
+    display:initial;
+}
+.aviso-contato h1{
+    font-size: 2rem;
+}
+.aviso-contato p{
+    font-size: 1.3rem;
+}
+.formulario-contato label{
+    font-size: 1.8rem;
+}
+.botao-enviar button{
+    font-size: 1.6rem;
+    padding:.9rem;
+    cursor: pointer;
+
+}
+.botao-enviar button:hover{
+    background-color: #2b2a2a;
+}
+footer{
+    padding-left: 11rem;
+    transition: padding-left .8s;
+    text-align: center;
+    max-width: 100%;
+    box-shadow: 0 -10px 9px 0 rgba(0, 0, 0, 0.25);   
+}
+footer h3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer.shifter-footer{
+    padding-left: 25rem;
+}
+    
+
+
+}
+
+
